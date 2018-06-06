@@ -37,7 +37,7 @@
     "request": "^2.81.0",
     "sproxydclient": "scality/sproxydclient#development/8.0",
     "sql-where-parser": "~2.2.1",
-    "utapi": "scality/utapi#development/8.0",
+    "utapi": "scality/utapi#ft/ZENKO-142-location-storage-quota",
     "utf8": "~2.1.1",
     "uuid": "^3.0.1",
     "vaultclient": "scality/vaultclient#development/8.0",
