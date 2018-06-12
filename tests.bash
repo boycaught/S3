@@ -57,21 +57,21 @@ then
   killandsleep 9990
 
   # Run S3 with multiple data backends ; run ft_tests
-
-  S3BACKEND=mem S3DATA=multiple npm start > $CIRCLE_ARTIFACTS/server_multiple_java.txt & bash wait_for_local_port.bash 8000 40 && cd ./tests/functional/jaws && mvn test
-
-  killandsleep 8000
-  cd $MYPWD
-
-  S3BACKEND=mem S3DATA=multiple npm start > $CIRCLE_ARTIFACTS/server_multiple_fog.txt & bash wait_for_local_port.bash 8000 40 && cd tests/functional/fog && rspec tests.rb
-
-  cd $MYPWD
-  killandsleep 8000
-
-  S3BACKEND=mem MPU_TESTING=yes S3DATA=multiple npm start > $CIRCLE_ARTIFACTS/server_multiple_awssdk.txt & bash wait_for_local_port.bash 8000 40 && S3DATA=multiple npm run ft_awssdk
-
-  cd $MYPWD
-  killandsleep 8000
+  # 
+  # S3BACKEND=mem S3DATA=multiple npm start > $CIRCLE_ARTIFACTS/server_multiple_java.txt & bash wait_for_local_port.bash 8000 40 && cd ./tests/functional/jaws && mvn test
+  # 
+  # killandsleep 8000
+  # cd $MYPWD
+  # 
+  # S3BACKEND=mem S3DATA=multiple npm start > $CIRCLE_ARTIFACTS/server_multiple_fog.txt & bash wait_for_local_port.bash 8000 40 && cd tests/functional/fog && rspec tests.rb
+  # 
+  # cd $MYPWD
+  # killandsleep 8000
+  # 
+  # S3BACKEND=mem MPU_TESTING=yes S3DATA=multiple npm start > $CIRCLE_ARTIFACTS/server_multiple_awssdk.txt & bash wait_for_local_port.bash 8000 40 && S3DATA=multiple npm run ft_awssdk
+  # 
+  # cd $MYPWD
+  # killandsleep 8000
 
   # Run external backend tests with proxy ; run ft_awssdk_external_backends
 
