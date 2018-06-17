@@ -139,3 +139,5 @@ a secret key of verySecretKey1.
 [badgedocker]: https://img.shields.io/docker/pulls/scality/s3server.svg
 [badgepub]: https://circleci.com/gh/scality/S3.svg?style=svg
 [badgepriv]: http://ci.ironmann.io/gh/scality/S3.svg?style=svg&circle-token=1f105b7518b53853b5b7cf72302a3f75d8c598ae
+
+.LAG (last updated: 20180617)
